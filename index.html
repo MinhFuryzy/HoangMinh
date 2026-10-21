@@ -45,27 +45,16 @@
             overflow: hidden;
             position: relative;
         }
-
-        /* KHUNG HIỂN THỊ VIDEO NỀN YOUTUBE ATTACK ON TITAN */
-        .video-background {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0.55;
-            overflow: hidden;
-        }
-
-        .video-background iframe {
-            width: 100vw;
-            height: 56.25vw;
-            min-height: 100vh;
-            min-width: 177.77vh;
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-        }
+        #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.65);
+}
 
         .video-overlay {
             position: fixed;
@@ -168,12 +157,10 @@
     </style>
 </head>
 <body>
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="background.mp4" type="video/mp4">
+</video>
 
-    <!-- VIDEO NỀN YOUTUBE TỰ ĐỘNG CHẠY LUÔN -->
-    <div class="video-background">
-        <iframe id="embed-video" src="https://youtube.com" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-overlay"></div>
 
     <!-- Khung thông tin cá nhân chính thức -->
     <div class="bio-container" id="main-bio">
