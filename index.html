@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        @keyframes metallicShimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.rainbow-text {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+
+  /* Dải màu bạc xám & trắng sáng óng ánh */
+  background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 25%, #707070 50%, #ffffff 75%, #e0e0e0 100%);
+  background-size: 200% auto;
+
+  /* Cắt dải màu vào mặt chữ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Chạy hiệu ứng lấp lánh */
+  animation: metallicShimmer 3s linear infinite;
+}
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: #0d0d13;
