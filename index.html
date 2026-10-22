@@ -222,11 +222,19 @@
             </button>
         </div>
     </div>
-   <!-- Bộ đếm lượt truy cập chuẩn trong khung -->
-<div class="visitor-counter" style="margin-top: 15px; text-align: center;">
-  <span style="font-size: 13px; color: #ffd700; font-weight: 600; letter-spacing: 1px;">👁️ Lượt ghé thăm: </span>
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fminhfuryzy.github.io%2FHoangMinh%2F&count_bg=%2300F2FE&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=VISITS&edge_flat=false" alt="Visitor Count" style="vertical-align: middle; height: 20px;" />
+  <!-- Bộ đếm lượt truy cập HTML + JS nội bộ -->
+<div style="margin-top: 15px; text-align: center; font-size: 13px; color: #a0aec0; letter-spacing: 1px;">
+  👁️ Lượt ghé thăm: <span id="visit-count" style="color: #00f2fe; font-weight: bold; font-size: 14px; text-shadow: 0 0 8px rgba(0,242,254,0.6);">...</span>
 </div>
+
+<script>
+  (function() {
+    let count = localStorage.getItem('minh_page_visits') || 100;
+    count = parseInt(count) + 1;
+    localStorage.setItem('minh_page_visits', count);
+    document.getElementById('visit-count').innerText = count.toLocaleString();
+  })();
+</script>
    <!-- ĐOẠN ĐỌC FILE NHẠC TỰ THÂN TRÊN KHO GIÚP TRÁNH LỖI CHỮ TIẾNG VIỆT -->
     <audio id="bg-music" src="" loop></audio>
 
