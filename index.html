@@ -35,16 +35,18 @@
   animation: metallicShimmer 3s linear infinite;
 }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: transparent;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
   #bg-video {
   position: fixed;
   top: 0;
@@ -153,7 +155,7 @@
 </head>
 <body>
 <video autoplay muted loop playsinline id="bg-video">
-  <source src="./background.mp4" type="video/mp4">
+ <source src="background.mp4" type="video/mp4">
 </video>
 
 
