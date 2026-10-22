@@ -211,20 +211,23 @@
         </a>
 <br>
 <a href="https://link4sub.com/notes/PeHX" class="rainbow-text" target="_blank">Cảm ơn mn đã theo dõi mình nhé💖 &rarr;</a>
-<!-- Widget Nhạc Đang Phát & Nút Bật/Tắt -->
-        <div style="margin: 15px auto 5px auto; display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(0, 0, 0, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.3); width: fit-content; position: relative; z-index: 100;">
-            <span style="font-size: 13px; color: #ffd700; display: flex; align-items: center; gap: 8px; font-weight: 500;">
-                <i class="fas fa-music"></i> 
+<!-- Widget Nhạc Đang Phát & Nút Bật/Tắt + Bộ Đếm -->
+    <div style="margin: 15px auto 5px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: rgba(0, 0, 0, 0.6); padding: 10px 16px; border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.3);">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 13px; color: #ffd700; font-weight: 500;">
+                <i class="fas fa-music"></i>
                 <span>Now Playing: <strong style="color: #fff;">xương rồng (intro)</strong></span>
             </span>
             <button id="music-toggle-btn" style="background: transparent; border: none; color: #ffd700; cursor: pointer; font-size: 15px; padding: 0 4px; outline: none;" title="Bật/Tắt nhạc">
                 <i class="fas fa-volume-up" id="music-icon"></i>
             </button>
         </div>
+       <!-- Dòng bộ đếm lượt truy cập -->
+        <div style="font-size: 12px; color: #a0aec0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; width: 100%; text-align: center;">
+            👁️ Lượt ghé thăm: <span id="visit-count" style="color: #00f2fe; font-weight: bold; text-shadow: 0 0 5px rgba(0,242,254,0.6);">...</span>
+        </div>
     </div>
-  <!-- Bộ đếm lượt truy cập HTML + JS nội bộ -->
-<div style="margin-top: 15px; text-align: center; font-size: 13px; color: #a0aec0; letter-spacing: 1px;">
-  👁️ Lượt ghé thăm: <span id="visit-count" style="color: #00f2fe; font-weight: bold; font-size: 14px; text-shadow: 0 0 8px rgba(0,242,254,0.6);">...</span>
+
 </div>
 
 <script>
