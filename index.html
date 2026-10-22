@@ -3,99 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinhFuryzy |Minh Hoang Bio</title>
+    <title>MinhFuryzy | Minh Hoang Bio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         @keyframes metallicShimmer {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-/* Hiệu ứng chữ Vàng Gold óng ánh chuyển động */
-.social-btn {
-    background-image: linear-gradient(
-        120deg, 
-        #bf953f 0%, 
-        #fcf6ba 25%, 
-        #b38728 50%, 
-        #fbf5b7 75%, 
-        #aa771c 100%
-    ) !important;
-    background-size: 200% auto !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    animation: goldShimmer 3s linear infinite !important;
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
-}
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        /* Hiệu ứng chữ Vàng Gold óng ánh chuyển động */
+        .social-btn {
+            background-image: linear-gradient(
+                120deg, 
+                #bf953f 0%, 
+                #fcf6ba 25%, 
+                #b38728 50%, 
+                #fbf5b7 75%, 
+                #aa771c 100%
+            ) !important;
+            background-size: 200% auto !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            animation: goldShimmer 3s linear infinite !important;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+        }
 
-@keyframes goldShimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-}
-.rainbow-text {
-  display: block;
-  margin: 10px auto;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-
-  /* Dải màu bạc xám & trắng sáng óng ánh */
-  background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 25%, #707070 50%, #ffffff 75%, #e0e0e0 100%);
-  background-size: 200% auto;
-
-  /* Cắt dải màu vào mặt chữ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* Chạy hiệu ứng lấp lánh */
-  animation: metallicShimmer 3s linear infinite;
-}
+        @keyframes goldShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        .rainbow-text {
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 25%, #707070 50%, #ffffff 75%, #e0e0e0 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: metallicShimmer 3s linear infinite;
+        }
         body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: transparent;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-  #bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 0; /* Đưa video lên trên nền trắng mặc định */
-  filter: brightness(0.65);
-}
-
-    
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.65);
+        }
 
         /* KHUNG BIO CHÍNH */
-.bio-container {
-    position: relative; /* Thêm dòng này */
-    overflow: hidden;   /* Thêm dòng này để bo tròn video theo khung */
-    background: rgba(10, 10, 15, 0.65);
-    padding: 45px 35px;
-    border-radius: 24px;
-    width: 390px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-    z-index: 10;
-}
+        .bio-container {
+            position: relative;
+            overflow: hidden;
+            background: rgba(10, 10, 15, 0.65);
+            padding: 45px 35px;
+            border-radius: 24px;
+            width: 390px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            z-index: 10;
+        }
         .avatar-box {
             position: relative;
             width: 110px; height: 110px;
@@ -120,7 +108,7 @@
             background: linear-gradient(45deg, #ff007f, #7149e8, #00d2ff, #ff007f);
             z-index: 1;
             animation: rotateGlow 3s linear infinite;
-            filter: blur(4px);D
+            filter: blur(4px);
         }
 
         @keyframes rotateGlow {
@@ -128,7 +116,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* CHỮ ĐỔI MÀU RAINBOW LIÊN TỤC CHẠY TỰ ĐỘNG */
         h1 {
             font-size: 26px;
             font-weight: 700;
@@ -148,7 +135,6 @@
 
         .tagline { font-size: 13px; color: #d1d1e0; margin-bottom: 30px; }
 
-        /* ĐỊNH DẠNG NÚT BẤM */
         .social-btn {
             display: flex;
             align-items: center;
@@ -170,85 +156,86 @@
         .social-btn.facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: #1877f2; color: #4da3ff; box-shadow: 0 0 20px rgba(24, 119, 242, 0.4); }
         .social-btn.tiktok:hover { background: rgba(255, 255, 255, 0.1); border-color: #fff; color: #fff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
         .social-btn.discord:hover { background: rgba(88, 101, 242, 0.15); border-color: #5865F2; color: #8592ff; box-shadow: 0 0 20px rgba(88, 101, 242, 0.4); }
-.social-btn.soundcloud:hover { background: rgba(255, 85, 0, 0.15); border-color: #ff5500; color: #fff; box-shadow: 0 0 20px rgba(255, 85, 0, 0.4); }
+        .social-btn.soundcloud:hover { background: rgba(255, 85, 0, 0.15); border-color: #ff5500; color: #fff; box-shadow: 0 0 20px rgba(255, 85, 0, 0.4); }
         .blog-link { display: inline-block; margin-top: 20px; font-size: 13px; color: #d1d1e0; text-decoration: none; transition: color 0.3s; }
         .blog-link:hover { color: #00d2ff; text-shadow: 0 0 8px rgba(0, 210, 255, 0.4); }
     </style>
 </head>
 <body>
-<video autoplay muted loop playsinline id="bg-video">
- <source src="background.mp4" type="video/mp4">
-</video>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
 
-
-   <!-- Khung thông tin cá nhân chính thức -->
+    <!-- Khung thông tin cá nhân chính thức -->
     <div class="bio-container" id="main-bio">
         <!-- Video nền riêng cho khung Bio -->
-       <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.5; pointer-events: none;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.5; pointer-events: none;">
             <source src="bio-bg.mp4" type="video/mp4">
         </video>
 
-        <div class="avatar-box">
-            <img src="avt minhfuryzy.png" alt="Avatar" class="avatar">
-        </div>
-        </div>
-        <h1>MinhFuryzy 👑</h1>
-       <p class="tagline" style="font-weight: 700; font-size: 16px; letter-spacing: 2px; background: linear-gradient(135deg, #00f2fe 0%, #4facfe 35%, #00c6ff 70%, #0072ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 12px rgba(0, 242, 254, 0.4);">明总很帅</p>
+        <!-- Toàn bộ nội dung bên trong khung Bio -->
+        <div style="position: relative; z-index: 2;">
+            <div class="avatar-box">
+                <img src="avt minhfuryzy.png" alt="Avatar" class="avatar">
+            </div>
+            
+            <h1>MinhFuryzy 👑</h1>
+            <p class="tagline" style="font-weight: 700; font-size: 16px; letter-spacing: 2px; background: linear-gradient(135deg, #00f2fe 0%, #4facfe 35%, #00c6ff 70%, #0072ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 12px rgba(0, 242, 254, 0.4);">明总很帅</p>
 
-        <!-- Nút YouTube chính chủ -->
-        <a href="https://www.youtube.com/@MinhFuryzy_Gaming" target="_blank" class="social-btn youtube">
-            <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube 
-        </a>
-        <!-- Nút Facebook chính chủ -->
-        <a href="https://www.facebook.com/profile.php?id=61586866439724" target="_blank" class="social-btn facebook">
-            <i class="fab fa-facebook" style="color: #1877f2;"></i> Facebook 
-        </a>
-        <!-- Nút TikTok chính chủ -->
-        <a href="https://www.tiktok.com/@minh.hoang2335" target="_blank" class="social-btn tiktok">
-            <i class="fab fa-tiktok" style="color: #fff;"></i> TikTok 
-        </a>
-        <!-- Nút Discord chính chủ -->
-        <a href="https://discord.gg/T49eN8uNE" target="_blank" class="social-btn discord">
-            <i class="fab fa-discord" style="color: #5865F2;"></i> Server Discord 
-        </a>
+            <!-- Nút YouTube chính chủ -->
+            <a href="https://www.youtube.com/@MinhFuryzy_Gaming" target="_blank" class="social-btn youtube">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube 
+            </a>
+            <!-- Nút Facebook chính chủ -->
+            <a href="https://www.facebook.com/profile.php?id=61586866439724" target="_blank" class="social-btn facebook">
+                <i class="fab fa-facebook" style="color: #1877f2;"></i> Facebook 
+            </a>
+            <!-- Nút TikTok chính chủ -->
+            <a href="https://www.tiktok.com/@minh.hoang2335" target="_blank" class="social-btn tiktok">
+                <i class="fab fa-tiktok" style="color: #fff;"></i> TikTok 
+            </a>
+            <!-- Nút Discord chính chủ -->
+            <a href="https://discord.gg/T49eN8uNE" target="_blank" class="social-btn discord">
+                <i class="fab fa-discord" style="color: #5865F2;"></i> Server Discord 
+            </a>
+            <!-- Nút SoundCloud chính chủ -->
+            <a href="https://soundcloud.com/minh-hoang-535048159" target="_blank" class="social-btn soundcloud">
+                <i class="fab fa-soundcloud" style="color: #ff5500;"></i> SoundCloud
+            </a>
+            
+            <a href="https://link4sub.com/notes/PeHX" class="rainbow-text" target="_blank">Cảm ơn mn đã theo dõi mình nhé💖 &rarr;</a>
 
-<!-- Nút SoundCloud chính chủ -->
-        <a href="https://soundcloud.com/minh-hoang-535048159" target="_blank" class="social-btn soundcloud">
-            <i class="fab fa-soundcloud" style="color: #ff5500;"></i> SoundCloud
-        </a>
-<br>
-<a href="https://link4sub.com/notes/PeHX" class="rainbow-text" target="_blank">Cảm ơn mn đã theo dõi mình nhé💖 &rarr;</a>
-<!-- Widget Nhạc Đang Phát & Nút Bật/Tắt + Bộ Đếm -->
-    <div style="margin: 15px auto 5px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: rgba(0, 0, 0, 0.6); padding: 10px 16px; border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.3);">
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 13px; color: #ffd700; font-weight: 500;">
-                <i class="fas fa-music"></i>
-                <span>Now Playing: <strong style="color: #fff;">xương rồng (intro)</strong></span>
-            </span>
-            <button id="music-toggle-btn" style="background: transparent; border: none; color: #ffd700; cursor: pointer; font-size: 15px; padding: 0 4px; outline: none;" title="Bật/Tắt nhạc">
-                <i class="fas fa-volume-up" id="music-icon"></i>
-            </button>
-        </div>
-       <!-- Dòng bộ đếm lượt truy cập -->
-        <div style="font-size: 12px; color: #a0aec0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; width: 100%; text-align: center;">
-            👁️ Lượt ghé thăm: <span id="visit-count" style="color: #00f2fe; font-weight: bold; text-shadow: 0 0 5px rgba(0,242,254,0.6);">...</span>
+            <!-- Widget Nhạc Đang Phát & Nút Bật/Tắt + Bộ Đếm -->
+            <div style="margin: 15px auto 5px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: rgba(0, 0, 0, 0.6); padding: 10px 16px; border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.3);">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 13px; color: #ffd700; font-weight: 500;">
+                        <i class="fas fa-music"></i>
+                        <span>Now Playing: <strong style="color: #fff;">xương rồng (intro)</strong></span>
+                    </span>
+                    <button id="music-toggle-btn" style="background: transparent; border: none; color: #ffd700; cursor: pointer; font-size: 15px; padding: 0 4px; outline: none;" title="Bật/Tắt nhạc">
+                        <i class="fas fa-volume-up" id="music-icon"></i>
+                    </button>
+                </div>
+                <!-- Dòng bộ đếm lượt truy cập -->
+                <div style="font-size: 12px; color: #a0aec0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; width: 100%; text-align: center;">
+                    👁️ Lượt ghé thăm: <span id="visit-count" style="color: #00f2fe; font-weight: bold; text-shadow: 0 0 5px rgba(0,242,254,0.6);">...</span>
+                </div>
+            </div>
         </div>
     </div>
 
-</div>
+    <script>
+        (function() {
+            let count = localStorage.getItem('minh_page_visits') || 100;
+            count = parseInt(count) + 1;
+            localStorage.setItem('minh_page_visits', count);
+            document.getElementById('visit-count').innerText = count.toLocaleString();
+        })();
+    </script>
 
-<script>
-  (function() {
-    let count = localStorage.getItem('minh_page_visits') || 100;
-    count = parseInt(count) + 1;
-    localStorage.setItem('minh_page_visits', count);
-    document.getElementById('visit-count').innerText = count.toLocaleString();
-  })();
-</script>
-   <!-- ĐOẠN ĐỌC FILE NHẠC TỰ THÂN TRÊN KHO GIÚP TRÁNH LỖI CHỮ TIẾNG VIỆT -->
     <audio id="bg-music" src="" loop></audio>
 
-  <script {nonce="strict"}>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             const musicTag = document.getElementById('bg-music');
             const toggleBtn = document.getElementById('music-toggle-btn');
