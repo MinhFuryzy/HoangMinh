@@ -216,17 +216,30 @@
    <!-- ĐOẠN ĐỌC FILE NHẠC TỰ THÂN TRÊN KHO GIÚP TRÁNH LỖI CHỮ TIẾNG VIỆT -->
     <audio id="bg-music" src="" loop></audio>
 
-    <script {nonce="strict"}>
-        // Tự động tìm và bốc file nhạc của bạn bất kể tên file dài hay ngắn
+   <script {nonce="strict"}>
         document.addEventListener("DOMContentLoaded", function() {
             const musicTag = document.getElementById('bg-music');
-            musicTag.src = encodeURIComponent("Vùng An Toàn - B Ray (ft. V#) - Prod. Hipz - EvB Records.mp3");
-        });
+            musicTag.src = encodeURIComponent("xương rồng (intro).mp3");
 
-        // Click chuột bất kỳ đâu để bài Vùng An Toàn lên tiếng cực bốc
-        document.addEventListener('click', function() {
-            document.getElementById('bg-music').play().catch(e => console.log("Chặn phát nhạc"));
-        }, { once: true });
+            // Tự động thử phát nhạc ngay khi vừa tải trang xong
+            const playPromise = musicTag.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // Nếu trình duyệt chặn autoplay, tự bật ngay khi người dùng chạm nhẹ/click vào web
+                    const startMusic = () => {
+                        musicTag.play();
+                        document.removeEventListener('click', startMusic);
+                        document.removeEventListener('touchstart', startMusic);
+                        document.removeEventListener('keydown', startMusic);
+                    };
+
+                    document.addEventListener('click', startMusic);
+                    document.addEventListener('touchstart', startMusic);
+                    document.addEventListener('keydown', startMusic);
+                });
+            }
+        });
     </script>
 </body>
 </html>
