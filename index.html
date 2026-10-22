@@ -211,24 +211,43 @@
         </a>
 <br>
 <a href="https://link4sub.com/notes/PeHX" class="rainbow-text" target="_blank">Cảm ơn mn đã theo dõi mình nhé💖 &rarr;</a>
-</div>
+</div><!-- Widget Nhạc Đang Phát & Nút Bật/Tắt -->
+        <div style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(0,0,0,0.4); padding: 8px 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); width: fit-content; margin-left: auto; margin-right: auto;">
+            <span style="font-size: 12px; color: #ffd700; display: flex; align-items: center; gap: 6px;">
+                <i class="fas fa-music"></i> 
+                <span>Now Playing: <strong>xương rồng (intro)</strong></span>
+            </span>
+            <button id="music-toggle-btn" style="background: transparent; border: none; color: #fff; cursor: pointer; font-size: 14px; padding: 0 5px; outline: none;" title="Bật/Tắt nhạc">
+                <i class="fas fa-volume-up" id="music-icon"></i>
+            </button>
+        </div>
     
    <!-- ĐOẠN ĐỌC FILE NHẠC TỰ THÂN TRÊN KHO GIÚP TRÁNH LỖI CHỮ TIẾNG VIỆT -->
     <audio id="bg-music" src="" loop></audio>
 
-   <script {nonce="strict"}>
+  <script {nonce="strict"}>
         document.addEventListener("DOMContentLoaded", function() {
             const musicTag = document.getElementById('bg-music');
+            const toggleBtn = document.getElementById('music-toggle-btn');
+            const musicIcon = document.getElementById('music-icon');
             musicTag.src = encodeURIComponent("xương rồng (intro).mp3");
 
-            // Tự động thử phát nhạc ngay khi vừa tải trang xong
+            function updateMusicIcon() {
+                if (musicTag.paused) {
+                    musicIcon.className = 'fas fa-volume-mute';
+                    musicIcon.style.color = '#ff4d4d';
+                } else {
+                    musicIcon.className = 'fas fa-volume-up';
+                    musicIcon.style.color = '#fff';
+                }
+            }
+
             const playPromise = musicTag.play();
             
             if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    // Nếu trình duyệt chặn autoplay, tự bật ngay khi người dùng chạm nhẹ/click vào web
+                playPromise.then(updateMusicIcon).catch(() => {
                     const startMusic = () => {
-                        musicTag.play();
+                        musicTag.play().then(updateMusicIcon);
                         document.removeEventListener('click', startMusic);
                         document.removeEventListener('touchstart', startMusic);
                         document.removeEventListener('keydown', startMusic);
@@ -237,6 +256,18 @@
                     document.addEventListener('click', startMusic);
                     document.addEventListener('touchstart', startMusic);
                     document.addEventListener('keydown', startMusic);
+                });
+            }
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (musicTag.paused) {
+                        musicTag.play().then(updateMusicIcon);
+                    } else {
+                        musicTag.pause();
+                        updateMusicIcon();
+                    }
                 });
             }
         });
